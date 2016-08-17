@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cloudCount.platform.amm.dao.impl.UserMapper">
+  <!-- <resultMap id="userMap" type="com.cloudCount.platform.amm.model.User" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="userName" property="userName" jdbcType="VARCHAR" />
+    <result column="userPassword" property="userPassword" jdbcType="VARCHAR" />
+  </resultMap> -->
+  
+	<insert id="addUser" parameterType="com.cloudCount.platform.amm.model.User" >
+		insert into t_user(id, userName, userPassword) values(#{id,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userPassword,jdbcType=VARCHAR})
+	</insert> 
+	
+</mapper>
