@@ -16,12 +16,12 @@
        <property name="jdbcUrl"><value>${connection.master.url}</value></property>
        <property name="user"><value>${connection.master.username}</value></property>
        <property name="password"><value>${connection.master.password}</value></property>
-       <property name="maxPoolSize" value="2000"/>   
+       <!-- <property name="maxPoolSize" value="2000"/>   
        <property name="minPoolSize" value="40"/>
        <property name="initialPoolSize" value="50"/> 
        <property name="acquireIncrement" value="30"/> 
        <property name="numHelperThreads" value="10"/> 
-       <property name="maxIdleTime" value="30"/> 
+       <property name="maxIdleTime" value="30"/>  -->
     </bean>    
     
 	<!-- 配置dataSource -->  

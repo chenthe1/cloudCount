@@ -28,7 +28,7 @@
     </servlet-mapping>
     <context-param>
     	<param-name>webAppRootKey</param-name>
-	    <param-value>bmCloudCountMybatis.root</param-value>
+	    <param-value>CloudCountMybatis.root</param-value>
 	</context-param>
 	<!-- 配置session超时时间，单位分钟 -->
 	<session-config>

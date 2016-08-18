@@ -40,7 +40,7 @@ public class UserAction {
 		String userPassword = req.getParameter("userPassword");
 		
 		User user = new User();
-		user.setId(11);
+		//user.setId(11);
 		user.setUserName(userName);
 		user.setUserPassword(userPassword);
 		

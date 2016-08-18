@@ -3,6 +3,13 @@
     "-//mybatis.org//DTD Config 3.0//EN"  
     "http://mybatis.org/dtd/mybatis-3-config.dtd">  
 <configuration>  
+
+
+	<!-- <typeAliases> 
+     <typeAlias type="com.cloudCount.platform.amm.model.User" alias="User" /> 
+  </typeAliases> -->
+  
+  
     <mappers>  
         <mapper resource="com/cloudCount/platform/amm/dao/impl/userMapper.xml"/>
     </mappers>  

@@ -2,12 +2,16 @@ package com.cloudCount.platform.amm.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
+
+@Entity
+// @Table(name="t_user")
 public class User implements Serializable{
 	
 	/**
 	 * serial Version UID
 	 */
-	private static final long serialVersionUID = 6424646603064118531L;
+	private static final long serialVersionUID = -659259023810073203L;
 
 	/**
 	 * user ID
