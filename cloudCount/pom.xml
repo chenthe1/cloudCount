@@ -226,7 +226,12 @@
 		<!-- <version>3.3.6</version> -->
 	</dependency>
 	<!-- dubbo end -->
-	
+
+	<dependency>
+		<groupId>com.addthis.basis</groupId>
+		<artifactId>basis-netty</artifactId>
+		<version>4.0.3</version>
+	</dependency>
   </dependencies>
   	
   <build>
@@ -250,12 +255,19 @@
 			<webXml>WebContent\WEB-INF\web.xml</webXml>
 			<failOnMissingWebXml>false</failOnMissingWebXml> 
 		</configuration>
-        
-        <!-- <configuration>
-          <warSourceDirectory>WebContent</warSourceDirectory>
-          <failOnMissingWebXml>false</failOnMissingWebXml>
-        </configuration> -->
       </plugin>
+      <!-- <plugin>
+		<groupId>org.codehaus.mojo</groupId>
+		<artifactId>tomcat-maven-plugin</artifactId>
+		<version>1.1</version>
+		<configuration>
+			<url>http://172.18.83.125:8080/manager</url>
+			<server>deploymentRepo</server>
+			<path>/iDeploy</path>
+		</configuration>
+	  </plugin> -->
     </plugins>
   </build>
+  <name>cloudCount Maven Webapp</name>
+  <url>http://maven.apache.org</url>
 </project>

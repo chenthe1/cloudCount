@@ -50,7 +50,7 @@
     <import resource="db-base.xml" /> 
     <import resource="db-clientRedis.xml" /> --> 
     <import resource="db-amm.xml" /> 
-    <import resource="dubbo-provider.xml" /> 
+    <!-- <import resource="dubbo-provider.xml" />  -->
     <!-- <import resource="db-baseMongo.xml" /> --> 
     
 </beans>
