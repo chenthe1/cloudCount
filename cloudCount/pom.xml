@@ -226,6 +226,14 @@
 		<!-- <version>3.3.6</version> -->
 	</dependency>
 	<!-- dubbo end -->
+	
+	<!-- Email begin -->
+	<dependency>
+		<groupId>javax.mail</groupId>
+		<artifactId>mail</artifactId>
+		<version>1.4.7</version>
+	</dependency>
+	<!-- Email end -->
 
 	<dependency>
 		<groupId>com.addthis.basis</groupId>
