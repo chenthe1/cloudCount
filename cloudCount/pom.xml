@@ -235,11 +235,45 @@
 	</dependency>
 	<!-- Email end -->
 
-	<dependency>
+ 	<!-- POI Excel数据导入包begin -->
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi</artifactId>
+        <version>3.10-FINAL</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi-ooxml-schemas</artifactId>
+        <version>3.10-FINAL</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi-ooxml</artifactId>
+        <version>3.10-FINAL</version>
+    </dependency>
+    <dependency>
+        <groupId>dom4j</groupId>
+        <artifactId>dom4j</artifactId>
+        <version>1.6.1</version>
+        <type>pom</type>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>openxml4j</artifactId>
+        <version>1.0-beta</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.xmlbeans</groupId>
+        <artifactId>xmlbeans</artifactId>
+        <version>2.6.0</version>
+    </dependency>
+    <!-- POI Excel数据导入包end -->
+
+	<!-- <dependency>
 		<groupId>com.addthis.basis</groupId>
 		<artifactId>basis-netty</artifactId>
 		<version>4.0.3</version>
-	</dependency>
+	</dependency> -->
   </dependencies>
   	
   <build>
