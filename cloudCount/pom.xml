@@ -277,14 +277,21 @@
   </dependencies>
   	
   <build>
+ 	<!-- 引入过来后的文件 begin -->
+    <!-- <resources>
+        <resource>
+            <directory>src/main/java</directory>
+        </resource>
+    </resources> -->
+    <!-- 引入过来后的文件 end -->
     <!-- <sourceDirectory>src</sourceDirectory> -->
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.1</version>
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
+          <source>1.7</source>
+          <target>1.7</target>
         </configuration>
       </plugin>
       <plugin>

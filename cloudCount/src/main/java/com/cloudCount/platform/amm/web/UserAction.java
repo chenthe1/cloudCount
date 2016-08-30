@@ -26,7 +26,7 @@ public class UserAction {
 	public UserService userServiceImpl;
 	
 	/**
-	 * ���׵�¼
+	 * 登录
 	 * @param req
 	 * @param map
 	 * @return

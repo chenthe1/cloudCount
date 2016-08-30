@@ -49,10 +49,10 @@
             <!-- 所有方法都使用事务 -->    
             <tx:method name="*" propagation="REQUIRED"/>    
             <!-- 定义所有get开头的方法都是只读的 -->    
-            <tx:method name="get*" read-only="true"/>    
+            <!-- <tx:method name="get*" read-only="true"/>    
 			<tx:method name="find*" read-only="true"/>
 			<tx:method name="show*" read-only="true"/>
-			<tx:method name="login" read-only="true"/>
+			<tx:method name="login" read-only="true"/> -->
         </tx:attributes>    
     </tx:advice>    
         

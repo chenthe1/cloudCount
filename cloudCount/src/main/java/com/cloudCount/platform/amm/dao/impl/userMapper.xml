@@ -7,8 +7,8 @@
 		<result column="userPassword" property="userPassword" jdbcType="VARCHAR" />
 	</resultMap> -->
   
-	<!-- <insert id="addUser" parameterType="com.cloudCount.platform.amm.model.User" >
+	<insert id="addUser" parameterType="com.cloudCount.platform.amm.model.User" >
 		insert into t_user(id, userName, userPassword) values(#{id,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userPassword,jdbcType=VARCHAR})
-	</insert>  -->
+	</insert>
 	
 </mapper>
