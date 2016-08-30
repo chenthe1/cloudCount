@@ -46,6 +46,7 @@ public class UserAction {
 		
 		System.out.println(userName);
 		System.out.println(userPassword);
+		// assert aadc = "dd";
 		
 		userServiceImpl.addUser(user);
 		return userPassword;
