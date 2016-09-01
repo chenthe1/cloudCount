@@ -268,6 +268,14 @@
         <version>2.6.0</version>
     </dependency>
     <!-- POI Excel数据导入包end -->
+    
+    <!-- JWT begin -->
+	<dependency>
+		<groupId>io.jsonwebtoken</groupId>
+		<artifactId>jjwt</artifactId>
+		<version>0.6.0</version>
+	</dependency>
+	<!-- JWT end -->
 
 	<!-- <dependency>
 		<groupId>com.addthis.basis</groupId>
