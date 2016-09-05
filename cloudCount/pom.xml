@@ -270,11 +270,11 @@
     <!-- POI Excel数据导入包end -->
     
     <!-- JWT begin -->
-	<dependency>
+	<!-- <dependency>
 		<groupId>io.jsonwebtoken</groupId>
 		<artifactId>jjwt</artifactId>
 		<version>0.6.0</version>
-	</dependency>
+	</dependency> -->
 	<dependency>
 	    <groupId>com.auth0</groupId>
 	    <artifactId>java-jwt</artifactId>
