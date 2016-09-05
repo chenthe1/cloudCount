@@ -2,7 +2,10 @@ package com.cloudCount.platform.amm.web;
 
 import java.io.IOException;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.annotation.ReadOnlyProperty;
@@ -32,10 +35,10 @@ public class UserAction {
 	 * @return
 	 * @throws IOException
 	 */
-	@ResponseBody
-	@ReadOnlyProperty
+	// @ResponseBody
+	// @ReadOnlyProperty
 	@RequestMapping(params="method=login")
-	public String loginAction(HttpServletRequest req, ModelMap map) throws IOException {
+	public String loginAction(HttpServletRequest req, ModelMap map, HttpServletResponse response) throws IOException {
 		String userName = req.getParameter("userName");
 		String userPassword = req.getParameter("userPassword");
 		
@@ -49,7 +52,19 @@ public class UserAction {
 		// assert aadc = "dd";
 		
 		userServiceImpl.addUser(user);
-		return userPassword;
+		
+		req.setAttribute("requestScope.IP", userName);
+		
+		// Cookie cookie=new Cookie("JSESSIONID", req.getCookies().toString());  
+		// Cookie cookie=new Cookie("JSESSIONID", req.getCookies().toString());  
+		Cookie cookie=new Cookie("token", req.getRequestedSessionId());  
+		
+		req.getRequestedSessionId();
+        response.addCookie(cookie);  
+        
+        // HttpSession session = httpRequest.getSession(false);
+		
+		return "succeed";
 	}
 
 }

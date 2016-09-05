@@ -81,8 +81,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	<div id="pageLocation">MySql&nbsp;配置&nbsp;</div>
 		<form action="systemConfig.do" >
 			<!-- Mysql配置 -->
-			数据库IP：<input type=text name="IP" value="${requestScope.IP}" required="required"/> <br/>
-			数据库端口：<input type=text name="port" value="${requestScope.port}" required="required"/> <br/>
+			数据库IP：<input type=text name="IP" value="${requestScope.IP}"  /> <br/>
+			数据库端口：<input type=text name="port" value="${requestScope.port}"  /> <br/>
 			数据库用户：<input type=text name="userName" value="${requestScope.userName}" required="required"/> <br/>
 			数据库密码：<input type="text" name="password" value="${requestScope.password}" required="required"/> <br/><br/><br/>
 			<div id="pageFooter">MongoDB&nbsp;配置&nbsp;</div>
