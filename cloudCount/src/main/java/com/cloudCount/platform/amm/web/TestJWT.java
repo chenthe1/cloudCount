@@ -10,6 +10,7 @@ import java.util.Map;
 import com.auth0.jwt.JWTSigner;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.JWTVerifyException;
+import com.auth0.jwt.internal.org.apache.commons.codec.binary.Base64;
 
 public class TestJWT {
 
@@ -23,31 +24,43 @@ public class TestJWT {
 
 		final JWTSigner signer = new JWTSigner(secret);
 		final HashMap<String, Object> claims = new HashMap<String, Object>();
-		claims.put("iss", issuer);
-		claims.put("exp", exp);
-		claims.put("iat", iat);
-
+		claims.put("iss", "123456");
+		//claims.put("exp", exp);
+		//claims.put("iat", iat);
+		
 		final String jwt = signer.sign(claims);
 		System.out.println(jwt);
 
 	}*/
 	
 	public static void main(String[] args){
-		final String jwt = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0NzMwNzk0NjQsImlzcyI6Imh0dHBzOi8vbXlkb21haW4uY29tLyIsImlhdCI6MTQ3MzA3OTQwNH0.GeScL7LMZTZpR_sOJcaeZGiJ-EqjJxLBIvRM5zcdGY4";
-		/*final String secret = "{{secret used for signing}}";
+		//final String jwt = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0NzMwNzk0NjQsImlzcyI6Imh0dHBzOi8vbXlkb21haW4uY29tLyIsImlhdCI6MTQ3MzA3OTQwNH0.GeScL7LMZTZpR_sOJcaeZGiJ-EqjJxLBIvRM5zcdGY4";
+		 String jwt="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxMjM0NTYifQ.t0GNedRjnNuYJDXvpM_ql8u99rk5hAVV14vDz9CwnfM";
+		final String secret = "{{a secret used for signing}}";
 		try {
-		    final JWTVerifier verifier = new JWTVerifier(secret, "{{my-audience}}", "{{my-issuer}}");
-		    final Map<String,Object> claims= jwtVerifier.verify(jwt);
-		} catch (JWTVerifyException e) {
-		    // Invalid Token
-		}*/
-		
-		final String secret = "{{secret used for signing}}";
-		try {
+			JWTVerifier jwtVerifier = new JWTVerifier(Base64.encodeBase64String(secret.getBytes()));
 		    final JWTVerifier verifier = new JWTVerifier(secret);
-		    final Map<String,Object> claims= JWTVerifier.verify(jwt);
+		    System.out.println( verifier.verify(jwt));
+		    final Map<String,Object> claims= jwtVerifier.verify(jwt);
+		    System.out.println(claims);
+		    
 		} catch (JWTVerifyException e) {
 		    // Invalid Token
+		} catch (InvalidKeyException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoSuchAlgorithmException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalStateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SignatureException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
 	}
