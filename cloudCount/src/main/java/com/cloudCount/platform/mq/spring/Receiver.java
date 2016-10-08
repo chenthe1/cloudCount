@@ -20,7 +20,7 @@ public class Receiver {
  
     @SuppressWarnings("unchecked")
     public static void main(String[] args) {
-        ApplicationContext ctx = new FileSystemXmlApplicationContext("classpath:applicationContext-*.xml");  
+        ApplicationContext ctx = new FileSystemXmlApplicationContext("classpath:spring-mq.xml");  
           
         JmsTemplate jmsTemplate = (JmsTemplate) ctx.getBean("jmsTemplate");  
         while(true) {  

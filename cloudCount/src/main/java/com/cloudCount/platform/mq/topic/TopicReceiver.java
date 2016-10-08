@@ -14,6 +14,8 @@ import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
  
 /**
+ * Topic主题发布和订阅消息
+ * 
  * <b>function:</b> 消息接收者； 依赖hawtbuf-1.9.jar
  * @author hoojo
  * @createDate 2013-6-19 下午01:34:27

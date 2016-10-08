@@ -11,6 +11,8 @@ import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
  
 /**
+ * 使用JMS方式发送接收消息
+ * 
  * <b>function:</b> 消息接收者
  * @author hoojo
  * @createDate 2013-6-19 下午01:34:27
