@@ -22,7 +22,7 @@ import org.springframework.jms.core.MessageCreator;
  * @version 1.0
  */
 public class Sender {
- 
+	
     public static void main(String[] args) {
         ApplicationContext ctx = new FileSystemXmlApplicationContext("classpath:spring-mq.xml");
         JmsTemplate jmsTemplate = (JmsTemplate) ctx.getBean("jmsTemplate");
